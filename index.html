@@ -23,12 +23,13 @@
                     <option v-for="answer in question.answers" >{{answer.text}}</option>
                     
                 </select>
-                {{question.userAnswer}}
             </div>
             <button v-on:click="calculateScore()">Submit</button>
         </div>
-        <!-- Score page -->
-        <div></div>
+        <!-- Score page -->        
+        <div v-if="page==3">
+            <h4>{{score}}/{{quiz.length}}</h4>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="app.js"></script>

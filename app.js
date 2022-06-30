@@ -34,6 +34,8 @@ var app = new Vue({
         // to attach your global quiz variable to a data variable:
         // myQuiz: QUIZ,
         page:1,
+        score: 0,
+        
         quiz:[{
             question: "What is the 3rd letter in the alphabet?",
             answers: [
@@ -96,14 +98,15 @@ var app = new Vue({
             for (let i = 0; i < this.quiz.length; i++) {
                 for(let j =0; j< this.quiz[i].answers.length; j++){
                     if(this.quiz[i].userAnswer == this.quiz[i].answers[j].text){
-                        if(this.quiz[i].answers[j]){
-                            console.log("correct");
+                        if(this.quiz[i].answers[j].correct){
+                            this.score++;
 
                         }
                     }
 
                 }
-            }
+            } 
+            this.page = 3;
         }
     },
     computed: {
