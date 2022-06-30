@@ -92,7 +92,19 @@ var app = new Vue({
             this.page = page;
         },
         
-        calculateScore: function () {}
+        calculateScore: function () {
+            for (let i = 0; i < this.quiz.length; i++) {
+                for(let j =0; j< this.quiz[i].answers.length; j++){
+                    if(this.quiz[i].userAnswer == this.quiz[i].answers[j].text){
+                        if(this.quiz[i].answers[j]){
+                            console.log("correct");
+
+                        }
+                    }
+
+                }
+            }
+        }
     },
     computed: {
         // a function that returns true if 0 userAnswer fields are blank ("")

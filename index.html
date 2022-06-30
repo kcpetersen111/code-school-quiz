@@ -19,11 +19,11 @@
             <div v-for="(question, index) in quiz">
                 <h2>question {{index+1}}</h2>
                 {{question.question}} <br>
-                <select>
+                <select v-model="question.userAnswer">
                     <option v-for="answer in question.answers" >{{answer.text}}</option>
                     
                 </select>
-                
+                {{question.userAnswer}}
             </div>
             <button v-on:click="calculateScore()">Submit</button>
         </div>
