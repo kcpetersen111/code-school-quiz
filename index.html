@@ -24,11 +24,12 @@
                         <option v-for="answer in question.answers" >{{answer.text}}</option>
                         
                     </select>
-                    <button></button>
-                    <button></button>
+                    <br>
+                    <button @click="questionOrder--" v-if="questionOrder!=0">Back</button>
+                    <button @click="questionOrder++" v-if="questionOrder!=4">Next</button>
                 </div>
             </div>
-            <button v-on:click="calculateScore()">Submit</button>
+            <button v-on:click="calculateScore()" v-if="questionOrder==4">Submit</button>
         </div>
         <!-- Score page -->        
         <div v-if="page==3">
