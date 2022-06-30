@@ -34,7 +34,52 @@ var app = new Vue({
         // to attach your global quiz variable to a data variable:
         // myQuiz: QUIZ,
         page:1,
-        quiz:[{question:"test"}],
+        quiz:[{
+            question: "What is the 3rd letter in the alphabet?",
+            answers: [
+            {text: "a", correct: false},
+            {text: "b", correct: false},
+            {text: "c", correct: true},
+            {text: "d", correct: false}
+            ],
+            userAnswer: ""},
+            {
+            question: "How many licks to the center of a tootsie pop?",
+        answers: [
+            {text: "3", correct: true},
+            {text: "682", correct: false},
+            {text: "841", correct: false},
+            {text: "1000", correct: false},
+        ],
+        userAnswer: ""},
+        {
+            question: "What is the largest shark?",
+        answers: [
+            {text: "Great white shark", correct: false},
+            {text: "Whale Shark", correct: true},
+            {text: "bull shark", correct: false},
+            {text: "tiger shark", correct: false},
+        ],
+        userAnswer: ""},
+        {
+            question: "Sharks have exsisted for approximately how long?",
+        answers: [
+            {text: "350 million years", correct: true},
+            {text: "10,000 years", correct: false},
+            {text: "1 million years", correct: false},
+            {text: "10 million years", correct: false},
+        ],
+        userAnswer: ""},
+        {
+            question: "What unusual thing can the bull shark do?",
+        answers: [
+            {text: "Survive in freshwater", correct: true},
+            {text: "Survive out water", correct: false},
+            {text: "Eat seaweed", correct: false},
+            {text: "Talk", correct: false},
+        ],
+        userAnswer: ""}
+    ],
     },
     methods:{
         // used for showing questions individually

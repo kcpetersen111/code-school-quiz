@@ -20,10 +20,12 @@
                 <h2>question {{index+1}}</h2>
                 {{question.question}} <br>
                 <select>
-                    <option>test</option>
-                    <option>test 2</option>
+                    <option v-for="answer in question.answers" >{{answer.text}}</option>
+                    
                 </select>
+                
             </div>
+            <button v-on:click="calculateScore()">Submit</button>
         </div>
         <!-- Score page -->
         <div></div>
