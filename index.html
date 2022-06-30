@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Choice Quiz</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Multiple Choice Quiz</h1>
+
+        <!-- Title page -->
+        <div v-if="page==1">
+            <!-- <h1>Multiple Choice Quiz</h1> -->
+            <h4>Welcome to my quiz</h4>
+            <button @click="setPage(2)">Begin your exam</button>
+        </div>
+
+        <!-- Quiz page -->
+        <div v-if="page==2">
+            <div v-for="(question, index) in quiz">
+                <h2>question {{index+1}}</h2>
+                {{question.question}} <br>
+                <select>
+                    <option>test</option>
+                    <option>test 2</option>
+                </select>
+            </div>
+        </div>
+        <!-- Score page -->
+        <div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
