@@ -35,7 +35,7 @@ var app = new Vue({
         // myQuiz: QUIZ,
         page:1,
         score: 0,
-        
+        questionOrder: 0,
         quiz:[{
             question: "What is the 3rd letter in the alphabet?",
             answers: [

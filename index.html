@@ -17,12 +17,16 @@
         <!-- Quiz page -->
         <div v-if="page==2">
             <div v-for="(question, index) in quiz">
-                <h2>question {{index+1}}</h2>
-                {{question.question}} <br>
-                <select v-model="question.userAnswer">
-                    <option v-for="answer in question.answers" >{{answer.text}}</option>
-                    
-                </select>
+                <div v-if="questionOrder == index">
+                    <h2>question {{index+1}}</h2>
+                    {{question.question}} <br>
+                    <select v-model="question.userAnswer">
+                        <option v-for="answer in question.answers" >{{answer.text}}</option>
+                        
+                    </select>
+                    <button></button>
+                    <button></button>
+                </div>
             </div>
             <button v-on:click="calculateScore()">Submit</button>
         </div>
